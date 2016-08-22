@@ -1,0 +1,11 @@
+[Desktop Entry]
+Name=UWeather
+Exec=uweather
+Type=Application
+Name[en_IN]=uweather
+Icon=${SNAP}/meta/gui/icon.png
+Type=Application
+Terminal=false
+StartupNotify=true
+Encoding=UTF-8
+Categories=Qt;Accessories;

@@ -1,0 +1,39 @@
+name: uweather
+version: 2.0.0
+summary: Powerful Calculation tool for Ubuntu Linux and derivatives
+confinement: strict
+description: |
+ Bundle of calculation tools.
+ Normal calculator, Scientific calculator, Multiple units converter, Age calculator,
+ BMI Calculator, Currency Converter , Expression Calculator and more to come.
+
+apps:
+  uweather:
+    command: usr/bin/wrapper
+    plugs:
+      - x11
+      - network
+      - home
+      - unity7
+parts:
+  glue:
+    plugin: copy
+    files:
+       supercalc: usr/bin/
+       wrapper: usr/bin/
+       Trolltech.conf: trollconf/
+    stage-packages:
+      - libqt5core5a
+      - libqt5gui5
+      - libqt5webkit5
+      - libqt5widgets5
+      - libqt5network5
+      - libqt5opengl5
+      - libqt5qml5
+      - libqt5sql5
+      - libqt5quick5
+      - libstdc++6
+      - libc6
+      - libfontconfig1
+      - libglib2.0-0
+    after: [desktop/qt5] 
